@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, landscape, margin=2cm]{geometry}
+
+% \usepackage{fontspec}  % Makes Unicode stuff work.
+\usepackage{mathtools} % Includes and extends amsmath.
+% \usepackage{amssymb}
+\usepackage{tipa}      % https://www.ctan.org/pkg/tipa
+\usepackage{multirow}
+\usepackage{tablefootnote}
+\usepackage{xcolor}
+
+\begin{document} %{{{1
+\thispagestyle{empty} % Clear both the header and the footer for this page.
+\vspace*{\fill}
+\begin{table}[!ht]
+   \centering
+   \begin{tabular}{rl|*{12}{c}}
+      {} & {} & Alpha & Beta & Gamma & Delta & Epsilon & Zeta & Eta & Theta & Iota & Kappa
+      & Lambda & Mu
+      \\
+      \hline
+      \multicolumn{2}{c|}{Letter} & A \alpha\tablefootnote{\texttt{\textbackslash alpha}}
+      & B \beta & \Gamma\tablefootnote{\texttt{\textbackslash Gamma}}{} \gamma & \Delta{}
+      \delta & E \epsilon{} \varepsilon\tablefootnote{\texttt{\textbackslash varepsilon}}
+      & Z \zeta & H \eta{} & \Theta{} \theta{} \vartheta & I \iota{} & K \kappa{} &
+      \Lambda{} \lambda & M \mu
+      \\
+      \multirow{2}{*}{Sound} &
+      Ancient & \textipa{[a]} & \textipa{[b]} & \textipa{[g]} & \textipa{[d]} &
+      \textipa{[e]} & \textipa{[zd]}\tablefootnote{or \textipa{[dz]}} & \textipa{[E:]} &
+      \textipa{[t\super h]} & \textipa{[i:] [i]} & \textipa{[k]} & \textipa{[l]} &
+      \textipa{[m]}
+      \\
+      {} & Modern & \textipa{[a]} & \textipa{[v]} & \textipa{[G] \sim{} [J]} &
+      \textipa{[D]} & \textipa{[e]} & \textipa{[z]} & \textipa{[i]} & \textipa{[T]} &
+      \textipa{[i]} & \textipa{[k] \sim{} [c]} & \textipa{[l]} & \textipa{[m]}
+      \\
+      \multicolumn{2}{c|}{Latin descendant} % "Latin derivative", "Ancestor of"
+      & A & B & C G & D & E & Z & H & - & I J & K & L & M
+      \\
+      \\
+      {} & \multicolumn{1}{c}{} & Nu & Xi & Omicron & Pi & Rho & Sigma & Tau & Upsilon &
+      Phi & Chi & Psi & Omega\tablefootnote{Math mode w and lower case Omega: \(w\)
+      \omega{}}
+      \\
+      \cline{3-14}
+      {} & \multicolumn{1}{c}{} & N \nu & \Xi{} \xi & O o & \Pi{} \pi & P \rho{} \varrho &
+      \Sigma{} \sigma & T \tau & \Upsilon{} \upsilon & \Phi{} \phi{} \varphi & X \chi &
+      \Psi{} \psi & \Omega{} \omega \\ {} & \multicolumn{1}{c}{} & \textipa{[n]} &
+      \textipa{[ks]} & \textipa{[o]} & \textipa{[p]} & \textipa{[r]} & \textipa{[s]} &
+      \textipa{[t]} & \textipa{[y] [y:]} & \textipa{[p\super h]} & \textipa{[k\super h]} &
+      \textipa{[ps]} & \textipa{[O:]}
+      \\
+      {} & \multicolumn{1}{c}{} & \textipa{[n]} & \textipa{[ks]} & \textipa{[o]} &
+      \textipa{[p]} & \textipa{[r]} & \textipa{[s]} & \textipa{[t]} & \textipa{[i]} &
+      \textipa{[f]} & \textipa{[x] [\c{c}]} & \textipa{[ps]} & \textipa{[o]}
+      \\
+      {} & \multicolumn{1}{c}{} & N & - & O & P & R & S & T & V Y U W & {\color{gray}F} &
+      X & - & -
+   \end{tabular}
+\end{table}
+\vspace*{\fill}
+\end{document} %}}}1
+
+% vim: tw=90 sts=-1 sw=3 et spelllang=en fdm=marker
